@@ -9,6 +9,8 @@
 * {
   padding: 0;
   margin: 0;
+  outline: none;
+  font-family: "vazir";
 }
 
 body {
@@ -19,4 +21,90 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+#open {
+  background: #2180d8;
+  border: 3px solid #2180d8;
+  color: white;
+  padding: 10px 50px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+#open:hover {
+  background: white;
+  color: #000;
+}
+
+.modal_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transform: translateY(-200px);
+  -webkit-transform: translateY(-200px);
+  -moz-transform: translateY(-200px);
+  -ms-transform: translateY(-200px);
+  -o-transform: translateY(-200px);
+}
+
+.modal_container.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+
+.modal_container .modal {
+  width: 650px;
+  background: white;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#close {
+  background: #2180d8;
+  border: 3px solid #2180d8;
+  color: white;
+  padding: 5px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  margin: 20px 0;
+  float: left;
+}
+
+#close:hover {
+  background: white;
+  color: black;
 }
